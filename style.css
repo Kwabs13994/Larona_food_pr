@@ -1,0 +1,505 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f2e7;
+    line-height: 1.5;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background: #5c2f06;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 55px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 20px;
+}
+
+.logo p {
+    font-size: 12px;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 6px 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #c69c2f;
+}
+
+/* CART ICON */
+.cart-icon {
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+    text-align: center;
+    padding: 50px 15px;
+    background: #c69c2f;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 28px;
+}
+
+.hero p {
+    font-size: 16px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #5c2f06;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+/* =========================
+   CARD (EQUAL HEIGHT)
+========================= */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* FORCE IMAGE SIZE */
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    margin: 8px 0;
+    font-weight: bold;
+    color: #e67e2c;
+}
+
+/* ORDER BUTTON */
+.card button {
+    padding: 7px;
+    border: none;
+    background: #c69c2f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.card button:hover {
+    background: #e67e2c;
+}
+
+/* =========================
+   SERVICES
+========================= */
+.services ul {
+    list-style: none;
+}
+
+.services li {
+    padding: 6px;
+    font-size: 16px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+.contact {
+    background: #5c2f06;
+    color: white;
+}
+
+.contact p {
+    font-size: 16px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #e67e2c;
+    text-align: center;
+    padding: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+/* =========================
+   CART PANEL
+========================= */
+.cart {
+    position: fixed;
+    right: -320px;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    transition: 0.3s;
+    z-index: 999;
+}
+
+.cart.open {
+    right: 0;
+}
+
+.cart h3 {
+    color: #5c2f06;
+}
+
+.cart ul {
+    list-style: none;
+    margin-top: 10px;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.cart li {
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart .total {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.cart button {
+    margin-top: 10px;
+    padding: 8px;
+    border: none;
+    background: #e67e2c;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+/* TABLET */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .card img {
+        height: 130px;
+    }
+}
+
+/* SMALL PHONE */
+@media (max-width: 480px) {
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card img {
+        height: 120px;
+    }
+}
+/* =========================
+   HAMBURGER MENU
+========================= */
+.menu-toggle {
+    display: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        background: #5c2f06;
+    }
+
+    nav.show {
+        display: flex;
+    }
+}
+
+/* =========================
+   HERO SLIDER
+========================= */
+.hero {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.hero-slider img {
+    position: absolute;
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hero-slider img.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 40%;
+}
+
+/* =========================
+   MAP
+========================= */
+.map {
+    padding: 30px;
+}
+
+/* =========================
+   ADINKRA DECORATION
+========================= */
+section::before {
+    content: "✦";
+    color: #c69c2f;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+.card {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* =========================
+   CENTERED SMALL MAP
+========================= */
+
+.map {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.map-container {
+    width: 60%;
+    max-width: 500px;
+    margin: 20px auto;   /* centers horizontally */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 250px;
+    border: 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .map-container {
+        width: 90%;
+    }
+
+    .map-container iframe {
+        height: 220px;
+    }
+}
+/* =========================
+   ADINKRA MAP FRAME
+========================= */
+
+.adinkra-frame {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 20px 30px;
+    border: 3px solid #c69c2f;
+    border-radius: 14px;
+    background: #fffdf7;
+}
+
+/* SYMBOL STYLE */
+.symbol {
+    text-align: center;
+    font-weight: bold;
+    color: #5c2f06;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 8px 0;
+}
+
+/* Top Symbol Decoration */
+.symbol.top::before,
+.symbol.top::after {
+    content: "⚔";
+    color: #c69c2f;
+    margin: 0 8px;
+}
+
+/* Bottom Symbol Decoration */
+.symbol.bottom::before,
+.symbol.bottom::after {
+    content: "✦";
+    color: #e67e2c;
+    margin: 0 6px;
+}
+
+/* Make frame responsive */
+@media (max-width: 768px) {
+    .adinkra-frame {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .symbol {
+        font-size: 12px;
+    }
+}
+.map-frame{
+  text-align:center;
+  margin:40px auto;
+}
+
+.map-wrapper{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+}
+
+.map-wrapper iframe{
+  width:320px;
+  height:220px;
+  border:4px solid #c69c2f;
+  border-radius:12px;
+}
+
+.symbol{
+  width:60px;
+  opacity:0.85;
+}
+
+.symbol.top,
+.symbol.bottom{
+  display:block;
+  margin:10px auto;
+}
+
+.symbol.left,
+.symbol.right{
+  width:55px;
+}
+

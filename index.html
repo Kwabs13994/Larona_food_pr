@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LARONA'S FOODS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <img src="logo.jpg" alt="Larona's Foods Logo">
+        <div>
+            <h1>LARONA'S FOODS</h1>
+            <p>Life Sustaining Food</p>
+        </div>
+    </div>
+    <div class="cart-icon" onclick="toggleCart()">
+           🛒 Cart (<span id="cart-count">0</span>)
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#kitchen">Kitchen</a>
+        <a href="#bakery">Bakery</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-slider">
+        <img src="abete3.jpg" class="slide active">
+        <img src="cake.jpg" class="slide">
+        <img src="spring_roll.jpg" class="slide">
+        <img src="bread.jpg" class="slide">
+    </div>
+
+    <div class="hero-text">
+        <h2>Welcome to Larona's Foods</h2>
+        <p>Life Sustaining Food</p>
+    </div>
+</section>
+
+
+<!-- KITCHEN -->
+<section id="kitchen">
+<h2>Larona's Kitchen</h2>
+
+<div class="gallery">
+
+<div class="card">
+   <img src="abete3.jpg">
+   <p>Kontonte with Groundnut Soup - GHS 65</p>
+   <button onclick="addToCart('Konkonte with Groundnut Soup', 65)">Order</button>
+</div>
+
+<div class="card">
+   <img src="abete3_2.jpg">
+   <p>Kontonte with Light Soup - GHS 75</p>
+   <button onclick="addToCart('Kontonte with Light Soup',75)">Order</button>
+</div>
+<div class="card">
+   <img src="Gob3.jpg">
+   <p>Gob3 - GHS 45</p>
+   <button onclick="addToCart('Gob3', 45)">Order</button>
+</div>
+<div class="card">
+   <img src="plain_rice.jpg">
+   <p>Plain Rice with stew - GHS 95</p>
+   <button onclick="addToCart('plain_rice', 95)">Order</button>
+</div>
+<!--<div class="card">
+   <img src="chips.jpg">
+   <p>Chips- GHS 25</p>
+   <button onclick="addToCart('chips', 25)">Order</button>
+</div>
+<div class="card">
+   <img src="plantain_chips.jpg">
+   <p>Unripe Plantain- GHS 30</p>
+   <button onclick="addToCart('plantain_chips', 30)">Order</button>
+</div>
+ -->
+
+</div>
+</section>
+
+<!-- BAKERY -->
+<section id="bakery">
+<h2>Larona's Bakery</h2>
+
+<div class="gallery">
+
+<div class="card">
+   <img src="plantain_chips.jpg">
+   <p>Unripe plantain - GHS 25</p>
+   <button onclick="addToCart('plantain_chips', 25)">Order</button>
+</div>
+<div class="card">
+   <img src="cake.jpg">
+   <p>Cake - GHS 45</p>
+   <button onclick="addToCart('Cake', 45)">Order</button>
+</div>
+<div class="card">
+   <img src="dough_nut.jpg">
+   <p>Dough dough_nut - GHS 45</p>
+   <button onclick="addToCart('Cake', 45)">Order</button>
+</div>
+<div class="card">
+   <img src="baked_dough.jpg">
+   <p>Meat Pie - GHS 55</p>
+   <button onclick="addToCart('Meat pie', 55)">Order</button>
+</div>
+<div class="card">
+   <img src="baked_dough_2.jpg">
+   <p>Meat Pie Special- GHS 70</p>
+   <button onclick="addToCart('Meat Pie', 70)">Order</button>
+</div>
+<div class="card">
+   <img src="baked_dough_3.jpg">
+   <p>Dough dough_nut - GHS 45</p>
+   <button onclick="addToCart('baked_dough_3', 45)">Order</button>
+</div>
+</section>
+
+<!-- DRINKS & SNACKS -->
+<section>
+<h2>Drinks & Snacks</h2>
+
+<div class="gallery">
+
+<div class="card">
+   <img src="sobolo.jpg">
+   <p>Sobolo - GHS 5</p>
+   <button onclick="addToCart('Sobolo', 5)">Order</button>
+</div>
+<div class="card">
+   <img src="sobolo_2.jpg">
+   <p>Sobolo - GHS 5</p>
+   <button onclick="addToCart('sobolo_2', 5)">Order</button>
+</div>
+<div class="card">
+   <img src="spring_roll.jpg">
+   <p>Spring Roll - GHS 5</p>
+   <button onclick="addToCart('Sobolo', 5)">Order</button>
+</div>
+<div class="card">
+   <img src="spring_roll_2.jpg">
+   <p>Spring Roll - GHS 5</p>
+   <button onclick="addToCart('sobolo_2', 5)">Order</button>
+</div>
+<div class="card">
+   <img src="spring_roll_3.jpg">
+   <p>Spring Roll - GHS 5</p>
+   <button onclick="addToCart('sobolo_3', 5)">Order</button>
+</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="services">
+<h2>Our Services</h2>
+<ul>
+<li>Restaurant (Larona's Kitchen)</li>
+<li>Bakery (Larona's Bakery)</li>
+<li>Catering for Events</li>
+</ul>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>📞 0548896708</p>
+<p>📞 0204438228</p>
+</section>
+<section class="map">
+    <h2>Find Us</h2>
+    <div class="map-frame">
+
+  <img src="nyame.jpg" class="symbol top">
+
+  <div class="map-wrapper">
+      <img src="akofena.jpg" class="symbol left">
+      
+      <iframe src="https://maps.google.com/maps?q=ghana&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+      
+      <img src="akofena.jpg" class="symbol right">
+  </div>
+
+  <img src="nyame.jpg" class="symbol bottom">
+
+</div>
+Founded in 2007, LORONA Foods is committed to restoring nutrition to its natural state. The brand focuses on real, whole food s with zero chemical processing , preserving essential enzymes and nutrients. Guided by its motto, <strong>Life Sustained Foods</strong>, LARONA Foods believes the human body thrives best on pure, earth-provided nourishment-simple, natural and untouched.</section>
+
+
+
+<footer>
+<p>© 2026 Larona's Foods | Life Sustaining Food</p>
+</footer>
+
+<!-- LINKED SCRIPT HERE -->
+<script src="script.js"></script>
+<!-- CART PANEL -->
+<div class="cart" id="cart">
+    <h3>Your Order</h3>
+    <ul id="cart-items"></ul>
+    <p class="total">Total: GHS <span id="cart-total">0</span></p>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="checkoutWhatsApp()">Checkout via WhatsApp</button>
+
+</div>
+
+</body>
+</html>
